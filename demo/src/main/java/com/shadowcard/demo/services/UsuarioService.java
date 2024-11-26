@@ -28,7 +28,7 @@ public class UsuarioService {
     public void createUsuario(CreateUsuarioDTO dto) {
 
         UserEntity usuarioEntity = new UserEntity();
-        usuarioEntity.setNome(dto.getNome());
+        usuarioEntity.setFullName(dto.getFullName());
         usuarioEntity.setEmail(dto.getEmail());
         usuarioEntity.setPassword(dto.getPassword());
         usuarioEntity = usuarioRepository.save(usuarioEntity);
@@ -42,7 +42,7 @@ public class UsuarioService {
             ShowUsuarioDTO usuarioDTO = new ShowUsuarioDTO();
 
             usuarioDTO.setId(usuario.getId());
-            usuarioDTO.setNome(usuario.getNome());
+            usuarioDTO.setFullName(usuario.getFullName());
             usuarioDTO.setEmail(usuario.getEmail());
             usuarioDTO.setDinheiro(usuario.getDinheiro());
             usuarioDTO.setDecks(usuario.getDecks().stream().map(deck -> deck.getId()).toList());

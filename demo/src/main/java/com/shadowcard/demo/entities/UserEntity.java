@@ -26,8 +26,8 @@ public class UserEntity implements UserDetails {
     @Column(nullable = false)
     private Integer id;
 
-    @Column(name = "nome")
-    private String nome;
+    // @Column(name = "nome")
+    // private String nome;
 
     @Column(name = "username", nullable = false)
     private String fullName;
@@ -35,7 +35,7 @@ public class UserEntity implements UserDetails {
     @Column(unique = true, length = 100, nullable = false)
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name="senha")
     private String password;
 
      @Column(name = "dinheiro")
@@ -58,9 +58,9 @@ public class UserEntity implements UserDetails {
     // @Column(name = "updated_at")
     // private Date updatedAt;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "role_id")
-    private RoleEntity role;
+    // @ManyToOne(fetch = FetchType.LAZY)
+    // @JoinColumn(name = "role_id")
+    // private RoleEntity role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -140,13 +140,13 @@ public class UserEntity implements UserDetails {
         this.decks = decks;
     }
 
-    public String getNome() {
-        return nome;
-    }
+    // public String getNome() {
+    //     return nome;
+    // }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    // public void setNome(String nome) {
+    //     this.nome = nome;
+    // }
     
 
 

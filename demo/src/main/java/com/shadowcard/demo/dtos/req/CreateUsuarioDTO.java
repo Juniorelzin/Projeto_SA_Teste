@@ -3,18 +3,18 @@ package com.shadowcard.demo.dtos.req;
 import java.util.List;
 
 public class CreateUsuarioDTO {
-    private String nome;
+    private String fullName;
     private String email;
     private String password;
     private List<Long> decks; // Lista de IDs dos decks
 
     // Getters e Setters
-    public String getNome() {
-        return nome;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getEmail() {

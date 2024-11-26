@@ -18,7 +18,7 @@ public class JwtTokenUtil {
                 .setSubject(username)
                 .claim("role", role)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 3600000)) // 1 hora de validade
+                .setExpiration(new Date(System.currentTimeMillis() + 3600000l)) // 1 hora de validade
                 .signWith(SignatureAlgorithm.HS256, secretKey)
                 .compact();
     }

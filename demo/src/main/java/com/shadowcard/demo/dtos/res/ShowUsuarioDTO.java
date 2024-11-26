@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ShowUsuarioDTO {
     private long id;
-    private String nome;
+    private String fullName;
     private String email;
     private int dinheiro;
     private List<Long> decks; // Lista de IDs dos decks
@@ -18,12 +18,12 @@ public class ShowUsuarioDTO {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getEmail() {
